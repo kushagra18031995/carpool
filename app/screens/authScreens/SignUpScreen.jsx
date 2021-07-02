@@ -5,8 +5,8 @@ import colors from "../../constants/colors";
 import { scale } from "../../constants/scales";
 import screenNames from "../../constants/screenNames";
 import AppContactInput from "./components/AppContactInput";
-import AppTextInput from "./components/AppTextInput";
-import Nav from "./components/Nav";
+import AppTextInput from "../../components/AppTextInput";
+import Nav from "../../components/Nav";
 import SignInOptions from "./components/SignInOptions";
 import { AppText as Text } from "../../components";
 

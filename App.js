@@ -8,7 +8,7 @@ import AppNavigator from "./app/route/AppNavigator";
 import AuthNavigator from "./app/route/AuthNavigator";
 
 export default function App() {
-  const [authentic, setAuthentic] = useState(false);
+  const [authentic, setAuthentic] = useState(true);
   return (
     <AuthContext.Provider value={{ authentic, setAuthentic }}>
       <NavigationContainer>

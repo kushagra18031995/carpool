@@ -13,6 +13,7 @@ import {
 import { StyleSheet, TouchableOpacity, View, Image } from "react-native";
 import colors from "./colors";
 import { useNavigation } from "@react-navigation/native";
+import { screenName } from ".";
 const Account = () => (
   <MaterialCommunityIcons
     name="account-outline"
@@ -38,9 +39,9 @@ const Back = () => {
     </TouchableOpacity>
   );
 };
-const Bell = () => (
+const Bell = ({ color = colors.black }) => (
   <TouchableOpacity>
-    <Feather name="bell" size={24} color={colors.black} />
+    <Feather name="bell" size={24} color={color} />
   </TouchableOpacity>
 );
 const Calendar = () => (
@@ -91,10 +92,36 @@ const Google = () => {
     </TouchableOpacity>
   );
 };
+const Heart = () => (
+  <View style={styles.heartContainer}>
+    <View style={styles.heartCircle} />
+    <AntDesign name="heart" size={20} color={colors.blue} />
+  </View>
+);
 const Load = () => <Feather name="download" size={24} color={colors.white} />;
+
+const Option = () => {
+  const navigation = useNavigation();
+  return (
+    <TouchableOpacity onPress={() => navigation.navigate(screenName.favorite)}>
+      <Ionicons name="md-options" size={24} color="black" />
+    </TouchableOpacity>
+  );
+};
+const Payment = () => (
+  <MaterialIcons name="payment" size={24} color={colors.blue} />
+);
 const Search = () => <EvilIcons name="search" size={24} color={colors.white} />;
 const SignOut = () => (
   <FontAwesome name="sign-in" size={24} color={colors.red} />
+);
+const Star = () => (
+  <AntDesign
+    name="star"
+    size={24}
+    color={colors.yellow}
+    style={{ marginHorizontal: 10 }}
+  />
 );
 const Steering = () => (
   <Image
@@ -116,9 +143,13 @@ export default {
   Fb,
   ForwardArrow,
   Google,
+  Heart,
   Load,
+  Option,
+  Payment,
   Search,
   SignOut,
+  Star,
   Steering,
   Truck,
 };
@@ -131,5 +162,19 @@ const styles = StyleSheet.create({
     borderColor: "#C0D3D9",
     alignItems: "center",
     justifyContent: "center",
+  },
+  heartContainer: {
+    height: 44,
+    width: 44,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  heartCircle: {
+    height: 44,
+    width: 44,
+    borderRadius: 22,
+    backgroundColor: colors.blue,
+    opacity: 0.15,
+    position: "absolute",
   },
 });

@@ -1,19 +1,15 @@
 import React from "react";
 import { View, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
 import Constants from "expo-constants";
-import { useNavigation } from "@react-navigation/native";
-import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
-import colors from "../../../constants/colors";
-import Icons from "../../../constants/icons";
-import { moderateScale, verticalScale } from "../../../constants/scales";
-import { AppText as Text } from "../../../components";
+
+import colors from "../constants/colors";
+import Icons from "../constants/icons";
+import { moderateScale, verticalScale } from "../constants/scales";
+import { AppText as Text } from ".";
 
 const { width, height } = Dimensions.get("window");
 
 export default function Nav({ title }) {
-  let [fontsLoaded] = useFonts({
-    Inter_900Black,
-  });
   return (
     <View style={styles.navBar}>
       <Icons.Back />

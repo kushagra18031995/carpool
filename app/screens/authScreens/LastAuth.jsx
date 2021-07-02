@@ -6,7 +6,7 @@ import colors from "../../constants/colors";
 import { scale, verticalScale } from "../../constants/scales";
 import { AppText as Text } from "../../components";
 
-import Nav from "./components/Nav";
+import Nav from "../../components/Nav";
 export default function LastAuth() {
   const { authentic, setAuthentic } = useContext(AuthContext);
   return (

@@ -4,7 +4,7 @@ import AppButton from "../../components/AppButton";
 import colors from "../../constants/colors";
 import { scale, verticalScale } from "../../constants/scales";
 import screenNames from "../../constants/screenNames";
-import Nav from "./components/Nav";
+import Nav from "../../components/Nav";
 import { AppText as Text } from "../../components";
 
 export default function ContractTerms() {

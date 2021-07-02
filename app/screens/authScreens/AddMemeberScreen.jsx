@@ -5,8 +5,8 @@ import colors from "../../constants/colors";
 import { scale, verticalScale } from "../../constants/scales";
 import screenNames from "../../constants/screenNames";
 import AppContactInput from "./components/AppContactInput";
-import AppTextInput from "./components/AppTextInput";
-import Nav from "./components/Nav";
+import AppTextInput from "../../components/AppTextInput";
+import Nav from "../../components/Nav";
 import { AppText as Text } from "../../components";
 
 export default function AddMember() {

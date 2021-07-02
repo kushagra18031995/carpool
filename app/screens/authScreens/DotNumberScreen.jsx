@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { View, Button, StyleSheet } from "react-native";
-import Nav from "./components/Nav";
+import Nav from "../../components/Nav";
 import OTPTextInput from "react-native-otp-textinput";
 import colors from "../../constants/colors";
 import { scale, verticalScale } from "../../constants/scales";

@@ -1,13 +1,19 @@
 import React from "react";
-import { View, Text, StyleSheet, Dimensions } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 import colors from "../../../constants/colors";
 import { verticalScale, width } from "../../../constants/scales";
-import { Animated } from "../../../constants";
+import { Animated, screenName } from "../../../constants";
 import { AppText } from "../../../components";
 
 export default function LoadDetails({ data }) {
+  const navigation = useNavigation();
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate(screenName.singleLoadDetails)}
+    >
       <View style={styles.column1}>
         <View style={styles.cost}>
           <AppText style={styles.costText}>{data.cost}</AppText>
@@ -56,7 +62,7 @@ export default function LoadDetails({ data }) {
           <Animated.Van />
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 const styles = StyleSheet.create({

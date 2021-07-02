@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, ScrollView } from "react-native";
 import { AppText } from "../../components";
 import { colors, Icons } from "../../constants";
 import { IconButton } from "./components";
@@ -8,7 +8,7 @@ import AuthNav from "./components/AuthNav";
 
 export default function AccountHome() {
   return (
-    <View>
+    <ScrollView>
       <AuthNav title="Account" />
       <View style={styles.profileContainer}>
         <View style={styles.col1}>
@@ -57,15 +57,14 @@ export default function AccountHome() {
             </View>
           </View>
         </View>
-        <View style={styles.separationLine} />
         <IconButton title="Contact Supporter" />
-        <View style={styles.separationLine} />
-
         <IconButton title="Legal" />
+        <IconButton title="Payment" />
+        <IconButton title="Notification" />
       </View>
       <View style={{ height: 15 }} />
       <IconButton title="Sign Out" />
-    </View>
+    </ScrollView>
   );
 }
 const styles = StyleSheet.create({
