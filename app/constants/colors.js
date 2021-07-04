@@ -14,6 +14,7 @@ export default {
   orange: "#ff751a",
   shadow: "rgba(217, 217, 217, 0.25)",
   textColor2: "#545454",
+  transparentModalBack: "rgba(255,255,255,.5)",
   red: "#E11900",
   white: "white",
   yellow: "#FFC043",

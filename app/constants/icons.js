@@ -13,7 +13,7 @@ import {
 import { StyleSheet, TouchableOpacity, View, Image } from "react-native";
 import colors from "./colors";
 import { useNavigation } from "@react-navigation/native";
-import { screenName } from ".";
+import screenName from "./screenNames";
 const Account = () => (
   <MaterialCommunityIcons
     name="account-outline"
@@ -44,6 +44,14 @@ const Bell = ({ color = colors.black }) => (
     <Feather name="bell" size={24} color={color} />
   </TouchableOpacity>
 );
+const Car = () => (
+  <FontAwesome5
+    name="car-alt"
+    size={18}
+    color={colors.blue}
+    style={{ marginRight: 16 }}
+  />
+);
 const Calendar = () => (
   <Feather name="calendar" size={20} color={colors.black} />
 );
@@ -63,6 +71,17 @@ const Chat = () => (
 );
 const Clipboard = ({ color }) => (
   <Feather name="clipboard" size={24} color={color} />
+);
+const Close = () => (
+  <AntDesign name="close" size={18} color="black" style={{ marginLeft: 16 }} />
+);
+const DND = () => (
+  <MaterialIcons
+    name="do-not-disturb-alt"
+    size={16}
+    color={colors.blue}
+    style={{ marginRight: 16 }}
+  />
 );
 const Eye = ({ show }) => {
   return (
@@ -99,17 +118,40 @@ const Heart = () => (
   </View>
 );
 const Load = () => <Feather name="download" size={24} color={colors.white} />;
-
-const Option = () => {
+const Location = () => (
+  <FontAwesome5
+    name="location-arrow"
+    size={16}
+    color={colors.blue}
+    style={{ marginRight: 16 }}
+  />
+);
+const MapMarker = () => (
+  <FontAwesome5
+    name="map-marker-alt"
+    size={16}
+    color={colors.blue}
+    style={{ marginRight: 16 }}
+  />
+);
+const Option = ({ onPress }) => {
   const navigation = useNavigation();
   return (
-    <TouchableOpacity onPress={() => navigation.navigate(screenName.favorite)}>
+    <TouchableOpacity onPress={onPress}>
       <Ionicons name="md-options" size={24} color="black" />
     </TouchableOpacity>
   );
 };
 const Payment = () => (
   <MaterialIcons name="payment" size={24} color={colors.blue} />
+);
+const Plus = () => (
+  <AntDesign
+    name="pluscircleo"
+    size={16}
+    color={colors.blue}
+    style={{ marginRight: 16 }}
+  />
 );
 const Search = () => <EvilIcons name="search" size={24} color={colors.white} />;
 const SignOut = () => (
@@ -129,24 +171,37 @@ const Steering = () => (
     source={require("../assets/images/steering.png")}
   />
 );
-const Truck = () => <Feather name="truck" size={24} color={colors.blue} />;
+const Truck = ({ marginRight = 16, size = 24 }) => (
+  <Feather
+    name="truck"
+    size={size}
+    color={colors.blue}
+    style={{ marginRight }}
+  />
+);
 export default {
   Account,
   Apple,
   Back,
   Bell,
+  Car,
   Calendar,
   Call,
   Chat,
   Clipboard,
+  Close,
+  DND,
   Eye,
   Fb,
   ForwardArrow,
   Google,
   Heart,
   Load,
+  Location,
+  MapMarker,
   Option,
   Payment,
+  Plus,
   Search,
   SignOut,
   Star,

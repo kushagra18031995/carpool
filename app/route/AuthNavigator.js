@@ -2,9 +2,7 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { View } from "react-native";
 import screenNames from "../constants/screenNames";
-import Landing from "../screens/authScreens/LandingScreen";
-import ImageCarousel from "../screens/authScreens/ImageCarousel";
-import LoginLanding from "../screens/authScreens/LoginLandingScreen";
+
 import Login from "../screens/authScreens/LoginScreen";
 import EnterOtp from "../screens/authScreens/EnterOtpScreen";
 import Description from "../screens/authScreens/DescriptionScreen";
@@ -19,7 +17,6 @@ import SignUp from "../screens/authScreens/SignUpScreen";
 const Stack = createStackNavigator();
 export default AuthNavigator = () => (
   <Stack.Navigator mode="modal" screenOptions={{ headerShown: false }}>
-    <Stack.Screen name={screenNames.loginLanding} component={LoginLanding} />
     <Stack.Screen name={screenNames.login} component={Login} />
     <Stack.Screen name={screenNames.otp} component={EnterOtp} />
     <Stack.Screen name={screenNames.description} component={Description} />
